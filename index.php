@@ -35,7 +35,7 @@ $r = $q->fetchAll();
 //$p = $q->bindParam();
 //$r = $q->getArrayResult();
 //$r = $q->getResult($q);
-//echo "ZZZZZZZZZ";
+
 echo "<pre>";
 var_dump($r);
 echo "</pre>";
