@@ -36,6 +36,7 @@ $r = $q->fetchAll();
 //$r = $q->getArrayResult();
 //$r = $q->getResult($q);
 
+
 echo "<pre>";
 var_dump($r);
 echo "</pre>";
