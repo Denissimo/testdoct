@@ -4,6 +4,7 @@ use Doctrine\ORM;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
+use SysUrls\SysUrls;
 
 //$em = new ORM\EntityManager();
 
@@ -36,7 +37,10 @@ $r = $q->fetchAll();
 //$r = $q->getArrayResult();
 //$r = $q->getResult($q);
 
+
 echo "<pre>";
-var_dump($r);
+//var_dump($r);
 echo "</pre>";
-//print_r($q);
+
+print_r(__DIR__);
+$sysUrls = new SysUrls();
