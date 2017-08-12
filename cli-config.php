@@ -23,4 +23,9 @@ $dbParams = array(
     'charset'  => 'UTF8',
 );
 $entityManager = EntityManager::create($dbParams, $config);
+
+//$platform = $entityManager->getConnection()->getDatabasePlatform();
+//$platform->registerDoctrineTypeMapping('enum', 'string');
+
+
 return ConsoleRunner::createHelperSet($entityManager);
