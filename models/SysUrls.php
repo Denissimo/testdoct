@@ -1,7 +1,5 @@
 <?php
 
-namespace Models\SysUrls;
-
 use Doctrine\ORM\Mapping as ORM;
 
 /**

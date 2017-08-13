@@ -92,7 +92,14 @@ class ComposerStaticInit7a5468e3803c60c8417fab6db873a98b
     );
 
     public static $fallbackDirsPsr0 = array (
-        0 => __DIR__ . '/../..' . '/src',
+        0 => __DIR__ . '/../..' . '/models',
+        1 => __DIR__ . '/../..' . '/modules',
+    );
+
+    public static $classMap = array (
+        'SysUrls' => __DIR__ . '/../..' . '/models/SysUrls.php',
+        'TestPost' => __DIR__ . '/../..' . '/models/TestPost.php',
+        'cls\\Cls' => __DIR__ . '/../..' . '/modules/cls.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -102,6 +109,7 @@ class ComposerStaticInit7a5468e3803c60c8417fab6db873a98b
             $loader->prefixDirsPsr4 = ComposerStaticInit7a5468e3803c60c8417fab6db873a98b::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit7a5468e3803c60c8417fab6db873a98b::$prefixesPsr0;
             $loader->fallbackDirsPsr0 = ComposerStaticInit7a5468e3803c60c8417fab6db873a98b::$fallbackDirsPsr0;
+            $loader->classMap = ComposerStaticInit7a5468e3803c60c8417fab6db873a98b::$classMap;
 
         }, null, ClassLoader::class);
     }

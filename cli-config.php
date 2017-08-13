@@ -13,7 +13,7 @@ $isDevMode = true;
 // Настройки будут браться из аннотаций, на мой взгляд, это удобнее
 // Заметьте, что здесь я передаю путь до каталога, который будет содержать в себе классы сущностей, проецируемые на БД
 
-$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $isDevMode);
+$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/models"), $isDevMode, null, null, false);
 $dbParams = array(
     'driver'   => 'pdo_mysql',
     'host'     => 'localhost',
