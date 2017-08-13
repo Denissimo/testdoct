@@ -1,2 +1,18 @@
-{"require": {"doctrine/orm": "v2.5.6",
-        "twbs/bootstrap": "^3.3"}}
+{
+        "require": {
+                "doctrine/orm": "2.4.*",
+                "symfony/yaml": "2.*"
+        },
+        "autoload": {
+                "classmap": [
+                        "models/",
+                        "modules/"
+                        ],
+                "psr-0": {
+                        "": [
+                                "models/",
+                                "modules/"
+                        ]
+                }
+        }
+}
