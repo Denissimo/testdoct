@@ -14,6 +14,7 @@ class ComposerStaticInit7a5468e3803c60c8417fab6db873a98b
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\Console\\' => 26,
         ),
@@ -23,7 +24,6 @@ class ComposerStaticInit7a5468e3803c60c8417fab6db873a98b
         ),
         'D' => 
         array (
-            'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
@@ -34,6 +34,10 @@ class ComposerStaticInit7a5468e3803c60c8417fab6db873a98b
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\Yaml\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
         'Symfony\\Component\\Debug\\' => 
         array (
@@ -46,10 +50,6 @@ class ComposerStaticInit7a5468e3803c60c8417fab6db873a98b
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
-        ),
-        'Doctrine\\Instantiator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (
@@ -91,12 +91,17 @@ class ComposerStaticInit7a5468e3803c60c8417fab6db873a98b
         ),
     );
 
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/../..' . '/src',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit7a5468e3803c60c8417fab6db873a98b::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit7a5468e3803c60c8417fab6db873a98b::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit7a5468e3803c60c8417fab6db873a98b::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit7a5468e3803c60c8417fab6db873a98b::$fallbackDirsPsr0;
 
         }, null, ClassLoader::class);
     }

@@ -2,6 +2,7 @@
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
+use Models\SysUrls\SysUrls;
 
 //$em = new ORM\EntityManager();
 
@@ -41,4 +42,4 @@ echo "</pre>";
 
 var_dump(realpath(__DIR__."/vendor/doctrine/orm/lib/Doctrine"));
 //var_dump(__DIR__);
-//$sysUrls = new SysUrls();
+$sysUrls = new SysUrls();

@@ -12,9 +12,8 @@ require_once __DIR__ . "/vendor/autoload.php";
 $isDevMode = true;
 // Настройки будут браться из аннотаций, на мой взгляд, это удобнее
 // Заметьте, что здесь я передаю путь до каталога, который будет содержать в себе классы сущностей, проецируемые на БД
-//$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $isDevMode);
-$config = Setup::createAnnotationMetadataConfiguration(array(realpath(__DIR__."/vendor/doctrine/orm/lib/Doctrine")), $isDevMode);
-//$config = Setup::createAnnotationMetadataConfiguration(array("models"), $isDevMode, null, null, false);
+
+$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $isDevMode);
 $dbParams = array(
     'driver'   => 'pdo_mysql',
     'host'     => 'localhost',
@@ -24,11 +23,5 @@ $dbParams = array(
     'charset'  => 'UTF8',
 );
 $entityManager = EntityManager::create($dbParams, $config);
-//$entityManager->getConnection()->getConfiguration()->setFilterSchemaAssetsExpression("/^(?!(_|bin))/");
-
-
-//$platform = $entityManager->getConnection()->getDatabasePlatform();
-//$platform->registerDoctrineTypeMapping('enum', 'string');
-
 
 return ConsoleRunner::createHelperSet($entityManager);
