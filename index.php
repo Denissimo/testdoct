@@ -1,10 +1,7 @@
 <?php
 
-use Doctrine\ORM;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\Tools\Console\ConsoleRunner;
-use SysUrls\SysUrls;
 
 //$em = new ORM\EntityManager();
 
@@ -42,5 +39,6 @@ echo "<pre>";
 //var_dump($r);
 echo "</pre>";
 
-print_r(__DIR__);
-$sysUrls = new SysUrls();
+var_dump(realpath(__DIR__."/vendor/doctrine/orm/lib/Doctrine"));
+//var_dump(__DIR__);
+//$sysUrls = new SysUrls();
